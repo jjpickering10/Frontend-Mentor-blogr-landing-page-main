@@ -11,6 +11,7 @@ font-family: 'Ubuntu', sans-serif; */
 
   /* Neutral */
   --White-text: hsl(0, 0%, 100%);
+  --White-text-lighter: hsl(0, 0%, 100%, 0.7);
   --Grayish-blue-footer-text: hsl(240, 2%, 79%);
   --Very-dark-grayish-blue-body-copy: hsl(207, 13%, 34%);
   --Very-dark-black-blue-footer-background: hsl(240, 10%, 16%);
@@ -85,7 +86,9 @@ header h1 {
 }
 
 header p {
-  font-size: 2rem;
+  margin-top: 1.2em;
+  font-size: 1.5rem;
+  color: var(--White-text-lighter);
 }
 
 nav,
@@ -108,9 +111,58 @@ nav {
 
 .main-menu li,
 .footer-menu li {
+  font-size: 1.2rem;
+  color: var(--White-text-lighter);
+  /* color: var(--Grayish-blue-footer-text); */
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  /* flex-direction: column; */
   margin-left: 5em;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+}
+
+.main-menu span {
+  margin-left: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.call-to-action {
+  display: flex;
+  justify-content: space-around;
+  width: 30em;
+  margin-top: 5em;
+}
+
+.call-to-action > :nth-child(1),
+.login-links > :nth-child(2) {
+  background: var(--White-text);
+  color: var(--Light-red);
+}
+
+.call-to-action > :nth-child(2) {
+  border: 1px solid var(--White-text);
+}
+
+.call-to-action button,
+.login-links button {
+  background: none;
+  border: none;
+  padding: 1rem;
+  border-radius: 2rem;
+  width: 10em;
+  font-weight: 600;
+}
+
+.login-links {
+  display: flex;
+  justify-content: space-around;
+  width: 30em;
+}
+
+.login-links > :nth-child(1) {
+  color: var(--White-text-lighter);
 }
 
 h2,
@@ -120,10 +172,6 @@ h3 {
 
 p {
   color: black;
-}
-
-p.headings {
-  color: var(--White-text);
 }
 
 .container-primary,
