@@ -46,6 +46,61 @@ footer {
   padding: 0 15em;
 }
 
+h2,
+h3 {
+  color: var(--Very-dark-blue-headings);
+}
+
+p {
+  color: black;
+}
+
+.main-section {
+  display: flex;
+  flex-direction: column;
+  height: 135vh;
+  position: relative;
+  overflow: hidden;
+  margin: 7.5em 0;
+}
+
+.main-section > :nth-child(1) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 25%;
+}
+.main-section > :nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 75%;
+}
+
+/* .container-primary,
+.container-middle {
+  margin: 2em auto;
+} */
+
+.container-middle h2,
+.container-middle p {
+  color: var(--White-text);
+}
+
+.headings {
+  text-align: center;
+}
+
+.split {
+  display: flex;
+}
+
+.split > * {
+  flex-basis: 100%;
+}
+
+/* -------------------------------------------------------------------------Header */
+
 .overlay {
   position: absolute;
   background: linear-gradient(var(--Very-light-red), var(--Light-red));
@@ -165,40 +220,50 @@ nav {
   color: var(--White-text-lighter);
 }
 
-h2,
-h3 {
-  color: var(--Very-dark-blue-headings);
+/* -------------------------------------------------------------------------Main section one */
+
+.main-section .headings {
+  font-size: 3.5rem;
+  margin-top: 1em;
 }
 
-p {
-  color: black;
+.img-background-section {
+  position: absolute;
+  background: url(../images/illustration-editor-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  z-index: -1;
 }
 
-.container-primary,
-.container-middle {
-  margin: 2em auto;
-}
+/* -------------------------------------------------------------------------Middle section */
 
 .middle-section {
   background: var(--Very-dark-desaturated-blue);
 }
 
-.container-middle h2,
-.container-middle p {
-  color: var(--White-text);
+/* -------------------------------------------------------------------------Main section two */
+
+.img-background-section-two {
+  position: absolute;
+  background: url(../images/illustration-laptop-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 25%;
+  margin-right: 5em;
+  z-index: -1;
 }
 
-.headings {
-  text-align: center;
+.extra {
+  margin: 15em 0;
 }
 
-.split {
-  display: flex;
-}
-
-.split > * {
-  flex-basis: 100%;
-}
+/* -------------------------------------------------------------------------Footer */
 
 footer {
   background: var(--Very-dark-black-blue-footer-background);
