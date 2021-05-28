@@ -482,3 +482,138 @@ footer > :nth-child(2) {
 .sub-menu li:focus {
   font-weight: 700;
 }
+
+/* Media Queries */
+
+@media (max-width: 400px) {
+  header,
+  section,
+  footer {
+    padding: 0 5%;
+  }
+
+  header,
+  .overlay {
+    height: 100vh;
+  }
+
+  header {
+    background-position: 35% 25%;
+    background-size: 400%;
+  }
+
+  .main-menu {
+    display: none;
+  }
+
+  header h1 {
+    font-size: 5ch;
+  }
+
+  header p {
+    font-size: 150%;
+  }
+
+  .main-section {
+    height: auto;
+    margin: 0;
+  }
+
+  .main-section .headings {
+    margin-top: 10vh;
+    font-size: 3ch;
+  }
+
+  .split {
+    flex-direction: column;
+  }
+
+  .text-content > * {
+    margin-top: 50vh;
+    text-align: center;
+  }
+
+  .text-content:nth-child(1) {
+    margin-top: 5vh;
+  }
+
+  .text-content h3 {
+    margin: 2vh auto;
+    max-width: 75%;
+  }
+
+  .img-background-section {
+    background: url(../images/illustration-editor-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+    left: 0;
+    right: 0;
+  }
+
+  .img-background-section-three {
+    top: -25vh;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .middle-section {
+    background-size: 150%;
+    background-position: 50% -200%;
+    height: 100vh;
+    margin-top: 40vh;
+  }
+
+  .overlay-middle {
+    height: 100vh;
+    margin-top: 40vh;
+  }
+
+  .container-middle .text-content > * {
+    margin-top: 75%;
+  }
+
+  .img-background-section-two {
+    background: url(../images/illustration-laptop-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+    left: 0;
+    right: 0;
+  }
+
+  .extra {
+    margin-bottom: 25%;
+  }
+
+  .logo {
+    margin-top: 20%;
+  }
+
+  footer,
+  .footer-menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-menu > li {
+    font-size: 200%;
+    margin-top: 50%;
+  }
+  .footer-menu > li:nth-child(3) > ul > li:nth-child(3) {
+    margin-bottom: 100%;
+  }
+
+  .footer-menu li {
+    align-items: center;
+    margin-right: 0;
+  }
+
+  .list-header li {
+    font-size: 75%;
+  }
+}
