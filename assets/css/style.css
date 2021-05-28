@@ -43,7 +43,7 @@ body {
 header,
 section,
 footer {
-  padding: 0 15em;
+  padding: 0 10%;
 }
 
 h2,
@@ -55,10 +55,10 @@ p {
 .main-section {
   display: flex;
   flex-direction: column;
-  height: 135vh;
+  height: 120vh;
   position: relative;
   overflow: hidden;
-  margin: 7.5em 0;
+  margin: 5% 0;
 }
 
 .main-section > :nth-child(1) {
@@ -72,6 +72,19 @@ p {
   align-items: center;
   justify-content: center;
   flex: 1 1 75%;
+}
+
+.main-section.extra > :nth-child(1) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 20%;
+}
+.main-section.extra > :nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 80%;
 }
 
 /* .container-primary,
@@ -88,22 +101,22 @@ p {
 .text-content > * {
   display: flex;
   flex-direction: column;
-  max-width: 78%;
+  /* max-width: 78%; */
 }
 
 .text-content h3 {
-  margin-bottom: 3rem;
-  font-size: 3.5rem;
+  margin-bottom: 2%;
+  font-size: 250%;
 }
 
 .text-content p {
   /* margin-bottom: 10rem; */
   /* font-family: "Ubunto", sans-serif; */
-  font-size: 2rem;
+  font-size: 150%;
 }
 
-.text-content > :nth-child(1) {
-  margin-bottom: 15rem;
+.text-content > :nth-child(2) {
+  margin-top: 30%;
 }
 
 .container-middle h2,
@@ -128,7 +141,7 @@ p {
 .overlay {
   position: absolute;
   background: linear-gradient(var(--Very-light-red), var(--Light-red));
-  height: 60vh;
+  height: 80vh;
   width: 100%;
   z-index: -1;
   border-bottom-left-radius: 10rem;
@@ -141,8 +154,8 @@ header {
   background-size: 155%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  height: 60vh;
+  /* align-items: center; */
+  height: 80vh;
   border-bottom-left-radius: 10rem;
 }
 
@@ -161,44 +174,62 @@ header > :nth-child(2) {
 }
 
 header h1 {
-  font-size: 5rem;
+  font-size: 550%;
 }
 
 header p {
   margin-top: 1.2em;
-  font-size: 1.5rem;
+  font-size: 190%;
   color: var(--White-text-lighter);
 }
 
-nav,
 .main-menu,
 .footer-menu {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   width: 100%;
-}
-
-nav {
-  align-items: center;
+  /* background: black; */
 }
 
 .nav-links {
   display: flex;
+  flex-grow: 1;
   align-items: center;
-  margin-left: 5em;
+  /* background: blue; */
 }
 
 .main-menu li,
 .footer-menu li {
-  font-size: 1.2rem;
+  font-size: 125%;
   color: var(--White-text-lighter);
   /* color: var(--Grayish-blue-footer-text); */
   display: flex;
   align-items: center;
   /* flex-direction: column; */
-  margin-left: 5em;
+  /* margin-left: 4%; */
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
+}
+
+.main-menu li:nth-of-type(1),
+.main-menu li:nth-of-type(2),
+.main-menu li:nth-of-type(3) {
+  /* background: lightcoral; */
+  margin-left: 5%;
+}
+
+.main-menu li:nth-of-type(3) {
+  /* background: lightcoral; */
+  margin-right: auto;
+}
+
+.main-menu li:nth-of-type(4) {
+  /* background: lightblue; */
+  margin-left: auto;
+}
+.main-menu li:nth-of-type(5) {
+  /* background: lightblue; */
+  margin-left: 5%;
 }
 
 .main-menu span {
@@ -214,40 +245,40 @@ nav {
   margin-top: 5em;
 }
 
-.call-to-action > :nth-child(1),
-.login-links > :nth-child(2) {
-  background: var(--White-text);
-  color: var(--Light-red);
-}
-
 .call-to-action > :nth-child(2) {
   border: 1px solid var(--White-text);
 }
 
 .call-to-action button,
-.login-links button {
+.main-menu li:nth-of-type(5) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: none;
   border: none;
   padding: 1rem;
   border-radius: 2rem;
   width: 10em;
-  font-weight: 600;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
 }
 
-.login-links {
-  display: flex;
-  justify-content: space-around;
-  width: 30em;
-}
-
-.login-links > :nth-child(1) {
-  color: var(--White-text-lighter);
+.call-to-action > :nth-child(1),
+.main-menu li:nth-of-type(5) {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  background: var(--White-text);
+  color: var(--Light-red);
+  /* padding: 1rem;
+  width: 10em;
+  border-radius: 2rem; */
 }
 
 /* -------------------------------------------------------------------------Main section one */
 
 .main-section .headings {
-  font-size: 4rem;
+  font-size: 300%;
   /* margin-top: 1em; */
 }
 
@@ -255,10 +286,11 @@ nav {
   position: absolute;
   background: url(../images/illustration-editor-desktop.svg);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 65%;
   height: 100%;
   width: 100%;
   top: 0;
+  left: 54%;
   z-index: -1;
 }
 
@@ -285,7 +317,7 @@ nav {
   height: 50vh;
   width: 40vw;
   top: -5rem;
-  left: 20rem;
+  left: 10%;
   /* z-index: -1; */
 }
 
@@ -304,15 +336,15 @@ nav {
 }
 
 .middle-section .text-content {
-  margin-top: 5rem;
+  margin-top: 8%;
 }
 
 .middle-section h2 {
-  font-size: 3.5rem;
+  font-size: 300%;
 }
 
 .middle-section p {
-  font-size: 2rem;
+  font-size: 150%;
 }
 
 /* -------------------------------------------------------------------------Main section two */
@@ -321,17 +353,17 @@ nav {
   position: absolute;
   background: url(../images/illustration-laptop-desktop.svg);
   background-repeat: no-repeat;
-  background-size: 75%;
+  background-size: 70%;
   height: 100%;
   width: 100%;
   top: 0;
-  right: 25%;
+  right: 20%;
   /* margin-right: 5em; */
   z-index: -1;
 }
 
 .extra {
-  margin: 15em 0;
+  margin: 10% 0;
 }
 
 /* -------------------------------------------------------------------------Footer */
