@@ -339,6 +339,23 @@ nav {
 footer {
   background: var(--Very-dark-black-blue-footer-background);
   display: flex;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  border-top-right-radius: 8rem;
+}
+
+.list-header ul,
+.list-header ul li {
+  margin-top: 2rem;
+  color: var(--White-text-lighter);
+}
+
+.footer-menu li {
+  margin-left: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  color: var(--White-text);
+  margin-right: 25%;
 }
 
 footer > :nth-child(1) {
