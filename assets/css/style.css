@@ -198,7 +198,7 @@ header p {
   /* background: blue; */
 }
 
-.main-menu li,
+.main-menu > li,
 .footer-menu li {
   font-size: 125%;
   color: var(--White-text-lighter);
@@ -211,31 +211,74 @@ header p {
   font-weight: 500;
 }
 
-.main-menu li:nth-of-type(1),
-.main-menu li:nth-of-type(2),
-.main-menu li:nth-of-type(3) {
+.main-menu > li:nth-of-type(1),
+.main-menu > li:nth-of-type(2),
+.main-menu > li:nth-of-type(3) {
   /* background: lightcoral; */
   margin-left: 5%;
 }
 
-.main-menu li:nth-of-type(3) {
+.main-menu > li:nth-of-type(1):hover,
+.main-menu > li:nth-of-type(2):hover,
+.main-menu > li:nth-of-type(3):hover,
+.main-menu > li:nth-of-type(1):focus,
+.main-menu > li:nth-of-type(2):focus,
+.main-menu > li:nth-of-type(3):focus {
+  cursor: pointer;
+  text-decoration: underline;
+  color: var(--White-text);
+}
+
+.main-menu > li:nth-of-type(1) svg,
+.main-menu > li:nth-of-type(2) svg,
+.main-menu > li:nth-of-type(3) svg {
+  transition: 500ms ease-in;
+}
+
+.main-menu > li:nth-of-type(1):hover svg,
+.main-menu > li:nth-of-type(2):hover svg,
+.main-menu > li:nth-of-type(3):hover svg,
+.main-menu > li:nth-of-type(1):focus svg,
+.main-menu > li:nth-of-type(2):focus svg,
+.main-menu > li:nth-of-type(3):focus svg {
+  transition: 500ms ease-in;
+  transform: rotate(180deg);
+}
+
+.main-menu > li:nth-of-type(3) {
   /* background: lightcoral; */
   margin-right: auto;
 }
 
-.main-menu li:nth-of-type(4) {
+.main-menu > li:nth-of-type(4) {
   /* background: lightblue; */
   margin-left: auto;
 }
-.main-menu li:nth-of-type(5) {
+.main-menu > li:nth-of-type(5) {
   /* background: lightblue; */
   margin-left: 5%;
 }
 
-.main-menu span {
+.main-menu > li:nth-of-type(5):hover,
+.main-menu > li:nth-of-type(5):focus,
+.call-to-action > :nth-child(1):hover,
+.call-to-action > :nth-child(1):focus {
+  cursor: pointer;
+  color: var(--White-text);
+  background: var(--Very-light-red-CTA-hover-background);
+}
+
+.call-to-action > :nth-child(2):hover,
+.call-to-action > :nth-child(2):focus {
+  cursor: pointer;
+  background: var(--White-text);
+  color: var(--Light-red);
+}
+
+.main-menu svg {
   margin-left: 0.5rem;
-  font-size: 0.8rem;
-  font-weight: 400;
+  /* font-size: 0.8rem;
+  font-weight: 400; */
 }
 
 .call-to-action {
@@ -250,7 +293,7 @@ header p {
 }
 
 .call-to-action button,
-.main-menu li:nth-of-type(5) {
+.main-menu > li:nth-of-type(5) {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -264,7 +307,7 @@ header p {
 }
 
 .call-to-action > :nth-child(1),
-.main-menu li:nth-of-type(5) {
+.main-menu > li:nth-of-type(5) {
   /* display: flex;
   justify-content: center;
   align-items: center; */
@@ -390,10 +433,52 @@ footer {
   margin-right: 25%;
 }
 
+.footer-menu li ul li:hover,
+.footer-menu li ul li:focus {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 footer > :nth-child(1) {
   flex: 1 1 25%;
 }
 
 footer > :nth-child(2) {
   flex: 1 1 75%;
+}
+
+/* Sub Menu */
+
+.main-menu li {
+  position: relative;
+}
+
+.sub-menu {
+  width: 200%;
+  position: absolute;
+  display: none;
+  top: 100%;
+  left: -25%;
+  list-style: none;
+}
+
+.main-menu li:hover .sub-menu,
+.main-menu li:focus .sub-menu {
+  padding: 25% 50% 25% 25%;
+  background: var(--White-text);
+  color: black;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.sub-menu li {
+  color: black;
+  margin-bottom: 10%;
+  padding-right: 50%;
+}
+
+.sub-menu li:hover,
+.sub-menu li:focus {
+  font-weight: 700;
 }
