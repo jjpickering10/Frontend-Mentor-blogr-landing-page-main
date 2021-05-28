@@ -264,6 +264,19 @@ nav {
 
 /* -------------------------------------------------------------------------Middle section */
 
+.overlay-middle {
+  position: absolute;
+  background: linear-gradient(
+    var(--Very-dark-gray-blue),
+    var(--Very-dark-desaturated-blue)
+  );
+  height: 35vh;
+  width: 100%;
+  z-index: -1;
+  border-bottom-left-radius: 8rem;
+  border-top-right-radius: 8rem;
+}
+
 .img-background-section-three {
   position: absolute;
   background: url(../images/illustration-phones.svg);
@@ -277,15 +290,25 @@ nav {
 }
 
 .middle-section {
-  background: var(--Very-dark-desaturated-blue);
+  /* background: var(--Very-dark-desaturated-blue); */
+  background: url(../images/bg-pattern-circles.svg);
+  background-repeat: no-repeat;
+  background-size: 75%;
+  background-position: -75% 85%;
+  /* height: 50vh; */
+  width: 100%;
   position: relative;
-  height: 30vh;
+  height: 35vh;
   border-bottom-left-radius: 8rem;
   border-top-right-radius: 8rem;
 }
 
+.middle-section .text-content {
+  margin-top: 5rem;
+}
+
 .middle-section h2 {
-  font-size: 4rem;
+  font-size: 3.5rem;
 }
 
 .middle-section p {
