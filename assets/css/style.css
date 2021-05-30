@@ -502,8 +502,110 @@ footer > :nth-child(2) {
     background-size: 400%;
   }
 
-  .main-menu {
+  /* .main-menu {
     display: none;
+  } */
+
+  .logo::after {
+    content: "";
+    position: absolute;
+    height: 5em;
+    width: 5em;
+    right: 0;
+    margin: 1em auto;
+    background: url(../images/icon-hamburger.svg);
+    background-repeat: no-repeat;
+  }
+
+  .nav-links,
+  .main-menu,
+  .main-menu li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .main-menu {
+    position: absolute;
+    top: 25%;
+    right: 5%;
+    left: 5%;
+    margin: 0 auto;
+    width: 75%;
+    height: 70%;
+    background: var(--White-text);
+    display: none;
+  }
+
+  .main-menu > li:nth-child(1),
+  .main-menu > li:nth-child(2),
+  .main-menu > li:nth-child(3),
+  .main-menu > li:nth-child(4) {
+    color: var(--Very-dark-blue-headings);
+    margin: 3% auto;
+  }
+
+  .main-menu > li:nth-child(5) {
+    background: linear-gradient(var(--Very-light-red), var(--Light-red));
+    color: var(--White-text);
+    margin: 0 auto 10%;
+  }
+
+  .main-menu > li:nth-child(1) {
+    margin-top: 10%;
+  }
+
+  .main-menu > li:nth-child(3) {
+    margin-bottom: auto;
+  }
+  .main-menu > li:nth-child(4) {
+    margin-top: auto;
+    margin-bottom: 5%;
+  }
+
+  .main-menu li:hover .sub-menu,
+  .main-menu li:focus .sub-menu {
+    align-items: center;
+    left: -150%;
+    padding: 25% 0;
+    /* margin: 0 -50%; */
+    background-color: lightgrey;
+    width: 400%;
+  }
+
+  .sub-menu li {
+    color: hsl(208deg 49% 24% / 50%);
+    padding: 0;
+    margin-bottom: 5%;
+  }
+
+  .main-menu li:nth-child(1):hover .sub-menu {
+    top: 500%;
+  }
+  .main-menu li:nth-child(2):hover .sub-menu {
+    top: 400%;
+  }
+  .main-menu li:nth-child(3):hover .sub-menu {
+    top: 300%;
+  }
+
+  .main-menu > li:nth-of-type(1):hover,
+  .main-menu > li:nth-of-type(2):hover,
+  .main-menu > li:nth-of-type(3):hover,
+  .main-menu > li:nth-of-type(1):focus,
+  .main-menu > li:nth-of-type(2):focus,
+  .main-menu > li:nth-of-type(3):focus {
+    color: hsl(208deg 49% 24% / 50%);
+    text-decoration: none;
+  }
+
+  .main-menu > li:nth-child(4)::before {
+    content: "";
+    position: absolute;
+    height: 0.075em;
+    width: 600%;
+    left: -250%;
+    top: -100%;
+    background: lightgray;
   }
 
   header h1 {
