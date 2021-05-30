@@ -147,6 +147,17 @@ p {
   border-bottom-left-radius: 10rem;
 }
 
+#hamburger {
+  display: none;
+  position: absolute;
+  height: 5em;
+  width: 5em;
+  right: 0;
+  margin: 20% auto;
+  background: url(../images/icon-hamburger.svg);
+  background-repeat: no-repeat;
+}
+
 header {
   background: url(../images/bg-pattern-intro.svg);
   background-position: 10% 50%;
@@ -483,7 +494,7 @@ footer > :nth-child(2) {
   font-weight: 700;
 }
 
-/* Media Queries */
+/* ---------------------------------------------------- Media Queries */
 
 @media (max-width: 400px) {
   header,
@@ -497,6 +508,10 @@ footer > :nth-child(2) {
     height: 100vh;
   }
 
+  #hamburger {
+    display: block;
+  }
+
   header {
     background-position: 35% 25%;
     background-size: 400%;
@@ -505,17 +520,6 @@ footer > :nth-child(2) {
   /* .main-menu {
     display: none;
   } */
-
-  .logo::after {
-    content: "";
-    position: absolute;
-    height: 5em;
-    width: 5em;
-    right: 0;
-    margin: 1em auto;
-    background: url(../images/icon-hamburger.svg);
-    background-repeat: no-repeat;
-  }
 
   .nav-links,
   .main-menu,
@@ -718,4 +722,8 @@ footer > :nth-child(2) {
   .list-header li {
     font-size: 75%;
   }
+}
+
+.flex-addition {
+  display: flex;
 }
