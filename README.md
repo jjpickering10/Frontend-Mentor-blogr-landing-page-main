@@ -27,6 +27,10 @@ Users should be able to:
 - CSS
 - Flexbox
 
+### Improvements
+
+- There are still bugs in certain screen sizes that need to be fixed. I focused entirely on desktop and mobile portrait.
+
 ### Continued development
 
 Continue to work on FrontEndMentor projects.
